@@ -31,14 +31,15 @@ class Parser(object):
                     res[defect] += [(reason, method)]
         return res
 
-    def to_pandas(self):
+    def to_pandas(self) -> pd.DataFrame:
         df = pd.DataFrame(columns=['Defect', 'Reason', 'Method'])
         for defect in self.data:
             for pair in self.data[defect]:
                 df.loc[-1] = [defect, pair[0], pair[1]]
                 df.index += 1
-        print(df)
+        return df
 
 
 a = Parser(r'C:\Users\Enterprice\Documents\Programming\Projects\Hackaton\dataset\Перечень-неисправностей.txt')
 data = a.to_pandas()
+data.to_csv('data.csv')
