@@ -38,8 +38,3 @@ class Parser(object):
                 df.loc[-1] = [defect, pair[0], pair[1]]
                 df.index += 1
         return df
-
-
-a = Parser(r'C:\Users\Enterprice\Documents\Programming\Projects\Hackaton\dataset\Перечень-неисправностей.txt')
-data = a.to_pandas()
-data.to_csv('data.csv')
