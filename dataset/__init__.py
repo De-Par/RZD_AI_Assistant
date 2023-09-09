@@ -1,6 +1,7 @@
 import os
 import tqdm
 import pandas as pd
+import pickle
 
 from core.error_handler import raise_error
 from docx.api import Document
@@ -57,18 +58,17 @@ class TableParser(object):
 
 
     def parse(self, data_path):
-        res = {
-            'тепловоз'   : {},
-            'электровоз' : {},
-        }
+        dataframe = []
         document = Document(data_path)
-        for index, table in tqdm.tqdm(enumerate(document.tables[1:])):
+        progress_bar = tqdm.tqdm(zip(headers, document.tables[1:]))
+        for header, table in progress_bar:
             rows = table.rows
             cells = [x.cells for x in rows]
             title = 'general'
             index_stack = [-1]
             for i, cell_row in enumerate(cells):
                 row = [cell.text for cell in cell_row]
+                # All the same string
                 if all(row[0] == row[j] for j in range(len(row))):
                     if index_stack[-1] == i - 1:
                         title += '. ' + row[0]
@@ -76,35 +76,13 @@ class TableParser(object):
                         title = row[0]
                     index_stack.append(i)
                 else:
-                    temp = headers[index].split(' на ')[1].split(' серии ')
+                    temp = header.split(' на ')[1].split(' серии ')
                     type_ = 'электровоз' if temp[0] == 'электровозах' else 'тепловоз'
                     series = temp[1].split(', ')
                     for s in series:
-                        if s not in res[type_]:
-                            res[type_][s] = {}
-                        res[type_][s][title] = row[1:]
-        self.to_pandas(res)
-
-    @staticmethod
-    def to_pandas(inp: dict) -> pd.DataFrame:
-        df = pd.DataFrame(columns=['type', 'model', 'title', 'defect', 'reason', 'solution'])
-        for type_ in inp:
-            for model in inp[type_]:
-                for title in inp[type_][model]:
-                    temp = inp[type_][model][title]
-                    frame = pd.DataFrame({
-                        'type': type_,
-                        'model': model,
-                        'title': title,
-                        'defect': temp[0],
-                        'reason': temp[1],
-                        'solution': temp[2],
-                    })
-                    df = df.append(frame, )
-                    
-                    print([type_, model, title, temp[0], temp[1], temp[2]])
-        df.to_excel('res.xlsx')
-        return df
+                        dataframe += [[type_, s, title, row[1], row[2], row[3]]]
+        dataframe = pd.DataFrame(dataframe, columns=['type', 'model', 'title', 'defect', 'reason', 'solution'])
+        dataframe.to_excel('reasdafda.xlsx')
 
 
 a = TableParser(r'C:\Users\Enterprice\Documents\Programming\Projects\Hackaton\dataset\Перечень неисправностей.docx')
