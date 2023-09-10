@@ -112,6 +112,7 @@ def HomeView(page, params, basket):
             tool_bar,
             ft.Container(
                 image_src="./core/frontend/assets/images/background.png",
+                image_opacity=0.35,
                 image_fit=ft.ImageFit.COVER,
                 expand=True,
                 alignment=ft.alignment.center,
