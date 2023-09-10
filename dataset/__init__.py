@@ -92,4 +92,5 @@ class TableParser(object):
         dataframe.to_excel('./dataset/parsed_data.xlsx')
 
 
-TableParser('./dataset/original.docx')
+if __name__ == '__main__':
+    TableParser('./dataset/original.docx')
