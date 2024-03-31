@@ -1,4 +1,4 @@
-# AIAssistant
+# RZD_AI_Assistant
 
 Умный голосовой помощник "Аленушка", который распознает и анализирует человеческую речь с последующей выдачей запрашиваемой информацией на основе имеющихся на борту устройства специализированных документов. 
 
@@ -6,7 +6,7 @@
 
 https://drive.google.com/file/d/1Z5qTaE2CnHF0Iq3jtPDHt3ysCvrwFBjD/view?usp=sharing
 
-[![Presentation](https://img.shields.io/badge/Download%20AS%20pdf-EF3939?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=)
+[![Presentation](https://img.shields.io/badge/Download%20AS%20pdf-EF3939?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/De-Par/RZD_AI_Assistant/blob/main/presentation.pdf)
 
 # Установка
 
