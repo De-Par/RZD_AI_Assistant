@@ -2,6 +2,10 @@
 
 Умный голосовой помощник "Аленушка", который распознает и анализирует человеческую речь с последующей выдачей запрашиваемой информацией на основе имеющихся на борту устройства специализированных документов. 
 
+# Демонстрация работы программы
+
+[![Download as PDF Button](https://img.shields.io/badge/Download%20AS%20pdf-EF3939?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://drive.google.com/file/d/1Z5qTaE2CnHF0Iq3jtPDHt3ysCvrwFBjD/view?usp=sharing)
+
 # Установка
 
 Для начала нужно установить/скачать все что есть в requirements.txt. Также мы использовали tts(text to speech), для этого также нужен голос, который находится в RHVoice-voice-Russian-Anna-v4.1.2012.18-setup.exe. Далее необходимо скачать ffmpeg через утилиту chocco, сделать это можно перейдя на официальный сайт https://chocolatey.org/install. 
