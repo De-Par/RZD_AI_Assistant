@@ -4,9 +4,7 @@
 
 # Демонстрация работы программы
 
-https://drive.google.com/file/d/1Z5qTaE2CnHF0Iq3jtPDHt3ysCvrwFBjD/view?usp=sharing
-
-[![Download as PDF Button](https://img.shields.io/badge/Download%20AS%20pdf-EF3939?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&color=black&labelColor=ec1c24)](https://mdtopdf.up.railway.app/convertPdf?url=https://github.com/De-Par/RZD_AI_assistant/blob/main/)
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1Z5qTaE2CnHF0Iq3jtPDHt3ysCvrwFBjD/view?usp=sharing)
 
 # Установка
 
