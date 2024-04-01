@@ -6,6 +6,10 @@
 
 [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1Z5qTaE2CnHF0Iq3jtPDHt3ysCvrwFBjD/view?usp=sharing)
 
+# Стэк
+
+![image](https://github.com/De-Par/RZD_AI_assistant/blob/main/stack.png)
+
 # Установка
 
 Для начала нужно установить/скачать все что есть в requirements.txt. Также мы использовали tts(text to speech), для этого также нужен голос, который находится в RHVoice-voice-Russian-Anna-v4.1.2012.18-setup.exe. Далее необходимо скачать ffmpeg через утилиту chocco, сделать это можно перейдя на официальный сайт https://chocolatey.org/install. 
